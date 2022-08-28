@@ -1,0 +1,25 @@
+.icon {
+    width: 140px;
+}
+
+.icon-2 {
+    width: 100px;
+}
+
+.manager-card {
+    width: 80%;
+}
+
+.icon-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-text, .card-title {
+    line-height: .5em;
+}
+
+.card-body {
+    /* background-color: aqua; */
+}

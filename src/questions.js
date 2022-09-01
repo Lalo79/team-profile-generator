@@ -1,6 +1,3 @@
-
-const BgRed = "\x1b[41m";
-
 const managerQuestions = [
     {
         type: 'input',
@@ -24,11 +21,12 @@ const managerQuestions = [
     },
 ]
 
+
 const internOrEngineer = [
     {
         type: 'list',
         name: 'memberRole',
-        message: 'Please indicate if you want to add an Engineer or an Intern?',
+        message: '\nPlease indicate if you want to add an Engineer or an Intern?\n',
         choices: ['Engineer', 'Intern'],
     },
     {

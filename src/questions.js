@@ -1,7 +1,9 @@
+const inquirer = require("inquirer");
+
 const managerQuestions = [
     {
         type: 'input',
-        name: 'managerName',
+        name: 'memberName',
         message: 'Please enter the name of the Manager of the team: ',
     },
     {
@@ -11,7 +13,7 @@ const managerQuestions = [
     },
     {
         type: 'input',
-        name: 'managerMail',
+        name: 'memberMail',
         message: 'Please enter the Manager e-mail: ',
         validate: (managerMail) => {
             valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(managerMail);
@@ -65,8 +67,21 @@ const internOrEngineer = [
 ]
 
 
+const addTeamMember = async (answerCollector = []) => {
+    const { addAnother, ...currentAnswers } = await inquirer.prompt(internOrEngineer)
+    answerCollector = [...answerCollector, currentAnswers]
+    return addAnother == 'Yes' ? addTeamMember(answerCollector) : answerCollector;        
+}
+
+const getManagerQuestions = async () => {
+    const { ...managerAnswers } = await inquirer.prompt(managerQuestions)
+    return managerAnswers
+}
+
 
 module.exports = {
     managerQuestions,
     internOrEngineer,
+    addTeamMember,
+    getManagerQuestions
 }

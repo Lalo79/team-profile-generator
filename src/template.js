@@ -7,6 +7,8 @@ let internCards = ``;
 
 const fillCards = () => {
     
+    // const memberArray = classes.buildTeam()
+    
     teamMembers.forEach(member => {
 
         member.role == 'Engineer' ? fillEngineerCard(member)
@@ -55,8 +57,6 @@ const fillCards = () => {
         </div>
 
     </div>
-
-
     
 </body>
 </html>
@@ -68,22 +68,22 @@ const fillCards = () => {
 const fillManagerCard = (member) => {
     
     return ManagerCard += `
-<div class="manager-card card mb-3">
-<div class="row no-gutters">
-    <div class="col-md-2 card-img  bg-light icon-space">
-        <img src="./images/manager.png" class="icon card-img" alt="Manager">
-    </div>
-    <div class="col-md-9">
-        <div class="card-body">
-            <h3 class="card-title">${member.name}</h3>
-            <p class="lead">Manager</p>
-            <p class="card-text">Employee ID: ${member.id}</p>
-            <p class="card-text">e-mail: <a href="mailto:">${member.email}</a></p>
-            <p class="card-text">Office Number: ${member.officeNumber}</p>
+        <div class="manager-card card mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-2 card-img  bg-light icon-space">
+                    <img src="./images/manager.png" class="icon card-img" alt="Manager">
+                </div>
+                <div class="col-md-9">
+                    <div class="card-body">
+                        <h3 class="card-title">${member.name}</h3>
+                        <p class="lead">Manager</p>
+                        <p class="card-text">Employee ID: ${member.id}</p>
+                        <p class="card-text">e-mail: <a href="mailto:">${member.email}</a></p>
+                        <p class="card-text">Office Number: ${member.officeNumber}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</div>
 `
 }
 

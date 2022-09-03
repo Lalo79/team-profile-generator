@@ -2,8 +2,6 @@ const inquirer = require("inquirer");
 const questions = require("../src/questions");
 const classes = require("../lib/classes")
 
-
-
 describe('Test Instances and their methods and properties',() => {
 
   const memberInfo = {
